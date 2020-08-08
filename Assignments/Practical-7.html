@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-7</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            /* border: solid; */
+            width:100vw;
+            padding: 15px;
+            margin: 0px auto;
+        }
+        .header{
+            background-color: lightgray;
+            height: 70px;
+            color: white;
+            font-size: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .banner{
+            background-color: lightskyblue;
+            height: 100vh;
+            color: white;
+            font-size: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .section1{
+            font-size: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+            
+        }
+        /* .section1:after{
+            content: '';
+            display: block;
+            clear: both;
+        } */
+        .circles{
+            background-color: rgb(238, 238, 9);
+            margin: 15px 30px;
+            width:266px;
+            height: 266px;
+            border-radius: 50%;
+            /* float: left; */
+        }
+        .section2{
+            /* border: solid green; */
+            margin: 20px ;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .left{
+            background-color: grey;
+            width: 48%;
+            height: 500px;
+            font-size: 40px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .right{ background-color:white;
+        width: 48%;
+        height: 500px;
+        margin-left: 30px;
+        }
+        #article{
+            margin: 0px 20px 20px 20px;
+            width:100%;
+            height: 153px;
+            background-color:rgb(241, 101, 50);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: white;
+            
+        }
+
+        .section3{
+            /* padding: 20px; */
+            /* border: solid ; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #box{
+            width: 300px;
+            height: 350px;
+            background-color: rgb(218, 56, 56);
+            margin: 20px 25px;
+            
+        }
+        .footer{
+            background-color: plum;
+            height: 60px;
+            color: white;
+            font-size: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="banner">Banner</div>
+        <p style="font-size: 40px; text-align: center;">Section-1</p>
+        <div class="section1"> 
+            <div class="circles"></div>
+            <div class="circles"></div>
+            <div class="circles"></div>
+            <div class="circles"></div>
+        </div>
+        <p style="font-size: 40px; text-align: center;">Section-2</p>
+        <div class="section2"> 
+            <div class="left">Main Content</div>
+            <div class="right">
+                <div id="article">Article-1</div>
+                <div id="article">Article-1</div>
+                <div id="article">Article-1</div>
+            </div>
+        </div>
+        <p style="font-size: 40px; text-align: center;">Section-3</p>
+        <div class="section3">
+            <div id="box"></div>
+            <div id="box"></div>
+            <div id="box"></div>
+            <div id="box"></div>
+        </div>
+        <p style="font-size: 40px; text-align: center;">Section-4</p>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
