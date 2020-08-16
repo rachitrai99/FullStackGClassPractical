@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practical-7</title>
+    <title>Practical-8</title>
     <style>
         *{
             margin: 0px;
@@ -16,7 +16,7 @@
             margin: 0px auto;
         }
         .header{
-            background-color: lightgray;
+            background-color: rgb(189, 182, 182);
             height: 70px;
             color: white;
             font-size: 40px;
@@ -25,6 +25,30 @@
             justify-content: center;
             margin-bottom: 15px;
         }
+
+        .navbar{
+        padding: 0px;
+        margin: 0px;
+        overflow: hidden;
+      }
+      .navbar li{
+        list-style: none;
+        display: inline-block;
+      }    
+      .navbar li a{
+        text-decoration: none; 
+        color: white;
+        display: block;
+        padding: 10px 30px;
+        text-align: center;
+        font-family: sans-serif,Arial, Helvetica;
+      }
+      .navbar li a:hover{
+        background-color: white;
+        color: black;
+        transition:0.5s;
+      }
+
         .banner{
             background-color: lightskyblue;
             height: 100vh;
@@ -66,6 +90,7 @@
             width:266px;
             height: 266px;
             border-radius: 50%;
+            border: 1px solid;
             /* float: left; */
         }
         .section2{
@@ -74,14 +99,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            
         }
         .left{
             background-color: grey;
-            width: 48%;
+            width: 49%;
             height: 600px;
             font-size: 30px;
             color: white;
-            
+           
             /* display: flex;
             align-items: center;
             justify-content: center; */
@@ -101,35 +127,85 @@
             font-size: 40px;
             color:black;
             overflow: hidden;
+            border: 1px solid;
             /* display: flex; */
        }
 
        #article h3{
-           position: absolute;
-         
+           position: absolute;    
            text-align: left;
+
        }
 
+       .overlap {
+       
+        font-size: 40px;
+        position: absolute;
+        z-index: 1;
+        left: 290px;
+        top: 0px;
+
+      }
         .section3{
             /* padding: 20px; */
             /* border: solid ; */
+           
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        #box{
+        .box{
+           
             width: 300px;
-            height: 350px;
-            background-color: rgb(218, 56, 56);
-            margin: 20px 25px;
+            height: 340px;
+            border-radius: 10px;
+            background-color: rgba(168, 164, 164, 0.671);
+            margin: 20px 20px;
             
         }
+
+        .box img{
+            width: 100%;
+            height: 150px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .box h3{
+            margin-top: 0px;
+            margin-bottom: 0px;
+            text-align: center;
+        }
+        .box p{
+             text-align:left;
+             margin: 5px;
+        }
+        .box .button a{
+            /* width: 100%;
+            background-color: rgba(223, 64, 64, 0.822);
+            border-radius: 8px;
+            margin: 10px 10px; */
+
+        background-color: rgb(241, 94, 26);
+        display: block;
+
+        text-decoration: none;
+        color: white;
+        border-radius: 8px;
+        height: auto;
+        padding: 10px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        
+        }
+
         .footer{
             background-color: plum;
-            height: 60px;
+            height: auto;
             color: white;
-            font-size: 40px;
-            display: flex;
+            font-size: 15px;
+            /* display: flex; */
+            text-align: center;
             align-items: center;
             justify-content: center;
             margin: 20px 0px;
@@ -139,12 +215,20 @@
 </head>
 <body>
     <div class="container">
-        <div class="header">Header</div>
-        <div class="banner">
+        <div class="header" id="top">
+            <ul class = "navbar">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#team">TEAM</a></li>
+                <li><a href="#about">ABOUT US</a></li>
+                <li><a href="#technologies">TECHNOLOGS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+              </ul>
+        </div>
+        <div class="banner" id="home">
             <img src="img/Practical 8/Banner Background.jpg" alt="">
             <h2>PRACTICAL-8</h2>
         </div>
-        <p style="font-size: 40px; text-align: center;">Team Members</p>
+        <p  id="team" style="font-size: 40px; text-align: center;">Team Members</p>
         <div class="section1"> 
             <div class="circles">
                 <img src="img/Practical 8/1.png" style="width: 100%; height: auto; border-radius: 50%;" alt="">
@@ -159,33 +243,84 @@
                 <img src="img/Practical 8/4.png" style="width: 100%; border-radius: 50%;" alt="">
             </div>
         </div>
-        <p style="font-size: 40px; text-align: center;">About US</p>
+        <p  id="about" style="font-size: 40px; text-align: center;">About US</p>
         <div class="section2"> 
             <div class="left"><h3 style="margin-left: 10px; margin-top: 10px;">About Us</h3>
                 <p style="margin: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo reiciendis odio, quis illum unde adipisci quaerat cum ea praesentium laudantium? Perferendis nisi magnam vitae quis vero quam, sint quos nihil excepturi velit quaerat accusantium nemo error! In cumque, labore dolore minus at error blanditiis quo possimus beatae, rerum accusamus nulla.</p>
             </div>
             <div class="right">
                 <div id="article">
+                    <div class="overlap">
+                        Project-1
+                    </div>
                     <img src="img/Practical 8/p1.jpg" style="margin-top: -50px;" alt="">
                     <h3>Project-1</h3>
                 </div>
                 <div id="article">
+                    <div class="overlap">
+                        Project-2
+                    </div>
                     <img src="img/Practical 8/p2.jpeg" style="margin-top: -80px;" width="100%" alt="">
-                    Article-1</div>
+                </div>
                 <div id="article">
+                    <div class="overlap">
+                        Project-3
+                    </div>
                     <img src="img/Practical 8/p3.jpg" style="margin-top: -50px;" width="100%" alt="">
-                    Article-1</div>
+                </div>
             </div>
         </div>
-        <p style="font-size: 40px; text-align: center;">Section-3</p>
+        <p  id="technologies" style="font-size: 40px; text-align: center;">Technologies Used</p>
         <div class="section3">
-            <div id="box"></div>
-            <div id="box"></div>
-            <div id="box"></div>
-            <div id="box"></div>
+            <div class="box">
+                <img src="../Assignments/img/Prac_5_html_image.jpg" alt="">
+                <h3>Introduction to html</h3>
+                <p>Hypertext Markup Language (HTML) is the standard markup language for
+                documents designed to be displayed in a web browser. It can be
+                assisted by technologies such as CSS and scripting languages such as
+                JS.</p>
+                <div class="button">
+                    <a href="Practical-5_html.html"> Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="../Assignments/img/Prac_5_css_image.jpg" alt="">
+                <h3>Introduction to CSS</h3>
+                <p>Cascading Style Sheets (CSS) is a style sheet language used for
+                    describing the presentation of a document written in a markup language
+                    like HTML. CSS is a technology of the World wide web.</p>
+                <div class="button">
+                    <a href="Practical-5_css.html"> Read More</a>
+            </div>
         </div>
-        <p style="font-size: 40px; text-align: center;">Section-4</p>
-        <div class="footer">Footer</div>
+            <div class="box">
+                <img src="../Assignments/img/javascript.jpg" alt="">
+                <h3>Introduction to Java Script</h3>
+                <p>JavaScript, often reffered as JS, is a high-level programming language. It was originally
+                    designed as a scripting language for websites but became widely
+                    adopted as a general-purpose programming language.</p>
+                <div class="button">
+                    <a href="Practical-5_javaScript.html"> Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="../Assignments/img/Prac_5_bootstrap_image.jpg" alt="">
+                <h3>Introduction to Bootstrap</h3>
+                <p>Bootstrap is a free and open-source CSS framework directed at
+                    responsive, mobile-first front-end web development. It contains CSS-
+                    and (optionally) JavaScript-based design templates.</p>
+                <div class="button">
+                    <a href="Practical-5_bootstrap.html"> Read More</a>
+                </div>
+            </div>
+        </div>
+        <p style="font-size: 40px; text-align: center;">Contact</p>
+        <div class="footer" id="contact"><p>Website template for Practical-8 </p>
+            <p>@Rachit Rai</p>
+            <p>Contact me on <a href="mailto:uzumki002@gmail.com">My Mail</a> My Mail</p>
+            <br>
+            <a href="#top">Back to top</a>
+        </div>
     </div>
 </body>
 </html>
