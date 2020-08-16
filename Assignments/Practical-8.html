@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-7</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            /* border: solid; */
+            width:100vw;
+            padding: 15px;
+            margin: 0px auto;
+        }
+        .header{
+            background-color: lightgray;
+            height: 70px;
+            color: white;
+            font-size: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .banner{
+            background-color: lightskyblue;
+            height: 100vh;
+            color: white;
+            font-size: 40px;
+
+            position: relative;
+            display: flex;
+           
+            margin-bottom: 15px;
+        }
+        .banner img{
+            margin: 0px auto;
+            width: 100%;
+            height: 100%;
+        }
+        .banner h2{
+            position: absolute;
+            margin:10px 20px;
+            color: lightgray;
+        }
+        
+        .section1{
+            font-size: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+            
+        }
+        /* .section1:after{
+            content: '';
+            display: block;
+            clear: both;
+        } */
+        .circles{
+            background-color: rgb(238, 238, 9);
+            margin: 15px 30px;
+            width:266px;
+            height: 266px;
+            border-radius: 50%;
+            /* float: left; */
+        }
+        .section2{
+            /* border: solid green; */
+            margin: 20px ;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .left{
+            background-color: grey;
+            width: 48%;
+            height: 600px;
+            font-size: 30px;
+            color: white;
+            
+            /* display: flex;
+            align-items: center;
+            justify-content: center; */
+
+        }
+        .right{ background-color:white;
+        width: 48%;
+        height: 600px;
+        margin-left: 30px;
+        }
+        #article{
+            position: relative;
+            margin: 0px 20px 20px 25px;
+            width:100%;
+            height: 184px;
+            background-color:rgb(241, 101, 50);
+            font-size: 40px;
+            color:black;
+            overflow: hidden;
+            /* display: flex; */
+       }
+
+       #article h3{
+           position: absolute;
+         
+           text-align: left;
+       }
+
+        .section3{
+            /* padding: 20px; */
+            /* border: solid ; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #box{
+            width: 300px;
+            height: 350px;
+            background-color: rgb(218, 56, 56);
+            margin: 20px 25px;
+            
+        }
+        .footer{
+            background-color: plum;
+            height: 60px;
+            color: white;
+            font-size: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="banner">
+            <img src="img/Practical 8/Banner Background.jpg" alt="">
+            <h2>PRACTICAL-8</h2>
+        </div>
+        <p style="font-size: 40px; text-align: center;">Team Members</p>
+        <div class="section1"> 
+            <div class="circles">
+                <img src="img/Practical 8/1.png" style="width: 100%; height: auto; border-radius: 50%;" alt="">
+            </div>
+            <div class="circles">
+                <img src="img/Practical 8/2.png" style="width: 100%; border-radius: 50%;" alt="">
+            </div>
+            <div class="circles">
+                <img src="img/Practical 8/3.png" style="width: 100%; border-radius: 50%;" alt="">
+            </div>
+            <div class="circles">
+                <img src="img/Practical 8/4.png" style="width: 100%; border-radius: 50%;" alt="">
+            </div>
+        </div>
+        <p style="font-size: 40px; text-align: center;">About US</p>
+        <div class="section2"> 
+            <div class="left"><h3 style="margin-left: 10px; margin-top: 10px;">About Us</h3>
+                <p style="margin: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo reiciendis odio, quis illum unde adipisci quaerat cum ea praesentium laudantium? Perferendis nisi magnam vitae quis vero quam, sint quos nihil excepturi velit quaerat accusantium nemo error! In cumque, labore dolore minus at error blanditiis quo possimus beatae, rerum accusamus nulla.</p>
+            </div>
+            <div class="right">
+                <div id="article">
+                    <img src="img/Practical 8/p1.jpg" style="margin-top: -50px;" alt="">
+                    <h3>Project-1</h3>
+                </div>
+                <div id="article">
+                    <img src="img/Practical 8/p2.jpeg" style="margin-top: -80px;" width="100%" alt="">
+                    Article-1</div>
+                <div id="article">
+                    <img src="img/Practical 8/p3.jpg" style="margin-top: -50px;" width="100%" alt="">
+                    Article-1</div>
+            </div>
+        </div>
+        <p style="font-size: 40px; text-align: center;">Section-3</p>
+        <div class="section3">
+            <div id="box"></div>
+            <div id="box"></div>
+            <div id="box"></div>
+            <div id="box"></div>
+        </div>
+        <p style="font-size: 40px; text-align: center;">Section-4</p>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
