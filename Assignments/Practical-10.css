@@ -1,0 +1,141 @@
+/* universal tag */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* for header section */
+#header {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(60, 6, 110);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header img {
+    height: 60px;
+    margin-right: 20px;
+}
+#header h1 {
+    color: whitesmoke;
+    font-size: 45px;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 2px;
+}
+
+/* for content section */
+#content img {
+    width: 60%;
+    height: 500px;
+    margin-top: 10px;
+    margin-left: 20%;
+    margin-bottom: 5px;
+    border-radius: 20px;
+}
+#content p {
+    margin: 10px;
+    text-align: justify;
+    font-family: cursive;
+}
+
+/* for sidebar section */
+#sidebar {
+    position: fixed;
+    background-color:rgb(60, 6, 110) ;
+    height: 100vh;
+    /* for making click effect */
+    left: -100%;
+    width: 25%;
+}
+#sidebar ul {
+    margin-top: 60px;
+    list-style: none;
+    width: 200px;
+}
+#sidebar ul li {
+    padding: 15px 20px;
+    font-size: 130%;
+    border-bottom: 2px solid rgb(206, 201, 201);
+}
+#sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+#sidebar ul li a i {
+    margin-right: 10px;
+}
+#sidebar hr {
+    height: 3px;
+    background-color: wheat;
+    margin-top: 200px;
+    opacity: 0.2;
+}
+#sidebar .one {
+    width: 40px;
+    height: 1px;
+    margin-top: 0px;
+}
+#sidebar .last {
+    font-size: 140%;
+    color: white;
+    margin: 20px;
+    margin-top: 10px;
+}
+#sidebar ul li:hover {
+    margin-left: 10px;
+}
+/* for making sliding sidebar */
+#check {
+    position: absolute;
+    /* for making it not visible */
+    visibility: hidden;
+    z-index: -10;
+}
+.show-btn, .hide-btn {
+    font-size: 30px;
+    line-height: 70px;
+    color: white;
+    margin-left: 20px;
+    position: fixed;
+}
+/* making hide button invisible before click */
+.hide-btn {
+    display: none;
+}
+#check:checked ~ #sidebar {
+    /* for sliding effect of sidebar */
+    left: 0;
+    transition: 0.5s;
+}
+#check:checked ~ .hide-btn {
+    display: block;
+    /* to display hide button */
+    z-index: 10;
+}
+#check:checked ~ .show-btn {
+    display: none;
+}
+/* for sliding content with sidebar */
+#check:checked ~ #content {
+    width: 75%;
+    float: right;
+}
+
+/* for responsive sidebar */
+@media (max-width: 750px) {
+    #sidebar {
+        width: 100%;
+    }
+    #sidebar ul {
+        margin-left: 40%;
+    }
+    #sidebar .one {
+        display: none;
+    }
+    #header h1 {
+        display: none;
+    }
+}
