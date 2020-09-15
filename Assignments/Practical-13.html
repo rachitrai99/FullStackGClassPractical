@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Responsive Footer</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 1px;
+        }
+        h2{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            color: rgb(116, 111, 111);
+        }
+        footer{
+            width: 100%;
+            background-color: rgb(36, 3, 59);
+        }
+        .sec-1{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .About{
+            width: 40%;
+            color: grey;
+            
+        }
+        p,a{
+            list-style: none;
+            color: grey;
+        }
+        a{
+            text-decoration: none;
+            
+        }
+       h3{
+            color: rgb(214, 206, 206);
+        }
+        .sec-1 ul{
+            list-style: none;
+            color: grey;
+            padding: 5px;
+        }
+        .sec-1 li{
+            padding: 1px;
+        }
+        hr{
+            background-color: black;
+        }
+        span{
+            padding-left: 5px;
+            font-size: 14px;
+        }
+        i{
+            font-size: 15px;
+        }
+        .sec-2{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 5px;
+        }
+        .sec-2 h3{
+            font-size: 30px;
+            font-weight: normal;
+            color: rgb(116, 111, 111);
+        }
+        .sec-2 a{
+            display: block;
+            width: 150px;
+            font-size: 30px;
+            color: rgb(214, 206, 206);
+            background-color: red;
+            margin-left: 10px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .sec-2 a:hover{
+            background-color: orange;
+        }
+        hr{
+            opacity: 0.2;
+        }
+        .sec-3 ul{
+            text-align: center;
+        }
+        .sec-3 li{
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            padding:20px;
+            
+            background-color:rgb(111, 20, 177) ;
+            border-radius: 50%;
+            /* font-size: 35px; */
+            margin: 20px;
+        }
+        .sec-3 ul li i{
+            color: whitesmoke;
+            font-size: 24px;
+            line-height: 20px;
+        }
+        .sec-3 ul li:nth-child(1):hover{
+            background-color: #3b5999;
+        }
+        .sec-3 ul li:nth-child(2):hover{
+            background-color: #55acee;
+        }
+        .sec-3 ul li:nth-child(3):hover{
+            background-color: #dd4b39;
+        }
+        .sec-3 ul li:nth-child(4):hover{
+            background-color: #0077B5;
+        }
+        .sec-3 ul li:nth-child(5):hover{
+            background-color: #ea4c89;
+        }
+
+        .sec-4{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            background-color: rgb(36, 4, 59);
+        }
+
+        .sec-4 p{
+            color: grey;
+            position: relative;
+        }
+        .sec-4 p::after{
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            position: absolute;
+            right: 0;
+            bottom: -10px;
+            background-color: yellow;
+            transition: all .3s;
+        }
+        .sec-4 p:hover::after{
+            width: 100%;
+        }
+
+        @media(max-width: 767px){
+            h2{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            color: rgb(116, 111, 111);
+        }
+        footer{
+            width: 100%;
+            background-color: rgb(36, 3, 59);
+        }
+        .sec-1{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .About{
+            width: 100%;
+            color: grey;
+            
+        }
+        p,a{
+            list-style: none;
+            color: grey;
+        }
+        a{
+            text-decoration: none;
+            
+        }
+       h3{
+            color: rgb(214, 206, 206);
+        }
+        .sec-1 ul{
+            list-style: none;
+            color: grey;
+            padding: 5px;
+        }
+        .sec-1 li{
+            padding: 1px;
+        }
+        hr{
+            background-color: black;
+        }
+        span{
+            padding-left: 5px;
+            font-size: 14px;
+        }
+        i{
+            font-size: 15px;
+        }
+        .sec-2{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 5px;
+        }
+        .sec-2 h3{
+            font-size: 30px;
+            font-weight: normal;
+            color: rgb(116, 111, 111);
+        }
+        .sec-2 a{
+            display: block;
+            width: 150px;
+            font-size: 30px;
+            color: rgb(214, 206, 206);
+            background-color: red;
+            margin-left: 10px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .sec-2 a:hover{
+            background-color: orange;
+        }
+        hr{
+            opacity: 0.2;
+        }
+        .sec-3 ul{
+            text-align: center;
+        }
+        .sec-3 li{
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            padding:20px;
+            
+            background-color:rgb(111, 20, 177) ;
+            border-radius: 50%;
+            /* font-size: 35px; */
+            margin: 20px;
+        }
+        .sec-3 ul li i{
+            color: whitesmoke;
+            font-size: 24px;
+            line-height: 20px;
+        }
+        .sec-3 ul li:nth-child(1):hover{
+            background-color: #3b5999;
+        }
+        .sec-3 ul li:nth-child(2):hover{
+            background-color: #55acee;
+        }
+        .sec-3 ul li:nth-child(3):hover{
+            background-color: #dd4b39;
+        }
+        .sec-3 ul li:nth-child(4):hover{
+            background-color: #0077B5;
+        }
+        .sec-3 ul li:nth-child(5):hover{
+            background-color: #ea4c89;
+        }
+
+        .sec-4{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            background-color: rgb(36, 4, 59);
+        }
+
+        .sec-4 p{
+            color: grey;
+            position: relative;
+        }
+        .sec-4 p::after{
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            position: absolute;
+            right: 0;
+            bottom: -10px;
+            background-color: yellow;
+            transition: all .3s;
+        }
+        .sec-4 p:hover::after{
+            width: 100%;
+        }
+        }
+    </style>
+</head>
+<body>
+    <h2>Responsive Footer</h2>
+    <footer>
+        <div class="sec-1">
+            <section class="About">
+                <h3>About</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores ea incidunt officia sed quae dolorum numquam tempora saepe perspiciatis voluptatum?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem reiciendis, ad ex temporibus sunt voluptates autem rem corporis ullam provident dolore obcaecati molestias necessitatibus blanditiis, eaque voluptatem, impedit incidunt fugiat!</p>
+            </section>
+            <section class="Categories">
+                <h3>Categories</h3>
+                <ul>
+                    <li>C</li>
+                    <li>UI Designing</li>
+                    <li>PHP</li>
+                    <li>Java</li>
+                    <li>Android</li>
+                    <li>Hybrid Apps</li>
+                </ul>
+            </section>
+            <section class="QuickLinks">
+                <h3>QuickLinks</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Contribute</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                </ul>
+            </section>
+            <section class="ContactUs">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fa fa-home"></i> <span>SCO-75, Chandigarh, India</span></li>
+                    <li><i class="fa fa-envelope"></i> <span>uzumki002@gmail.com</span></li>
+                    <li><i class="fa fa-phone"></i> <span>Mobile: 000xxxx000</span></li>
+                    <li><i class="fa fa-facebook-official"></i> <span>Facebook ka page</span></li>
+                </ul>
+            </section>
+        </div>
+        
+        <hr width="100%">
+        <div class="sec-2">
+            <h3>Register for free</h3>
+            <a href="#">Sign Up!</a>
+        </div>
+        <hr width="100%">
+        
+        <div class="sec-3">
+            <ul>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+            </ul>
+        </div>
+        <div class="sec-4">
+            <p>Copyright © 2020 All Rights Reserved by Gama-Labs</ p>
+        </div>
+    </footer>
+</body>
+</html>
