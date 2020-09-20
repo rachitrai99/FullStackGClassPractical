@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>fake</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            /* border: solid; */
+            width:100vw;
+            padding: 15px;
+            margin: 0px auto;
+        }
+      .header{
+            background-color: grey;
+            display: inline-block;
+            text-align: center;
+            width: 100vw;
+            height: 80px;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+        }
+        .header:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .navbar{
+            list-style:none;
+            margin-top: 0;
+            margin-bottom: 0;
+            
+            padding: 0;
+            overflow: hidden;
+            line-height: 80px;
+            /* float: right; */
+            
+        }
+        
+        .navbar li{
+            display: inline-block;
+            margin-top: 0px;
+            width: 220px;
+            line-height: 80px;
+            /* padding-left: 20px; */
+            list-style: none;
+        }
+        .navbar a{
+            display: block;
+            text-decoration: none;
+            font-family:fantasy ;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+        .navbar li a:hover{
+            background-color: rgb(202, 183, 11);
+            color: lavenderblush;
+            transition: 0.4s;
+        }
+        .show, .hide{
+            line-height: 80px;
+            font-size: 30px;
+            display: none;
+        }
+        .show{
+            float: right;
+        }
+        .show i{
+            margin-right: 20px;
+        }
+
+        #chk{
+            position: absolute;
+            visibility: hidden;
+            z-index: -10;
+            display: none;
+        }
+
+        html{
+            scroll-padding-top: 60px;
+            scroll-behavior: smooth;
+        }
+
+         .banner{
+            width: 99vw;
+            height: 100vh;
+            position: relative;
+            border: 2px solid;
+            margin-top: 80px;
+        }
+
+        .banner img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .banner h2{
+            position: absolute;
+            color: rgb(230, 223, 223);
+            text-transform: uppercase;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 35px;
+            top: 20px;
+            left: 20;
+        }
+        .section1{
+            font-size: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+            
+        }
+        /* .section1:after{
+            content: '';
+            display: block;
+            clear: both;
+        } */
+        .circles{
+            
+            margin: 15px 30px;
+            width:266px;
+            height: 266px;
+            border-radius: 50%;
+        }
+        .section2{
+            /* border: solid green; */
+            margin: 20px ;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .left{
+            background-color: grey;
+            width: 49%;
+            height: 600px;
+            font-size: 30px;
+            color: white;
+           
+        }
+        .right{ background-color:white;
+        width: 48%;
+        height: 600px;
+        margin-left: 30px;
+        }
+        #article{
+            position: relative;
+            margin: 0px 20px 20px 25px;
+            width:100%;
+            height: 184px;
+            /* background-color:rgb(241, 101, 50); */
+            font-size: 40px;
+            color:black;
+            overflow: hidden;
+            border: 1px solid;
+            /* display: flex; */
+       }
+
+       #article h3{
+           position: absolute;    
+           text-align: left;
+
+       }
+
+       .overlap {
+       
+        font-size: 40px;
+        position: absolute;
+        z-index: 1;
+        left: 0px;
+        top: 0px;
+
+      }
+        .section3{
+            /* padding: 20px; */
+            /* border: solid ; */
+           
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box{
+           
+            width: 300px;
+            height: 340px;
+            border-radius: 10px;
+            background-color: rgba(168, 164, 164, 0.671);
+            margin: 20px 20px;
+            
+        }
+
+        .box img{
+            width: 100%;
+            height: 150px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .box h3{
+            margin-top: 0px;
+            margin-bottom: 0px;
+            text-align: center;
+        }
+        .box p{
+             text-align:left;
+             margin: 5px;
+        }
+        .box .button a{
+            /* width: 100%;
+            background-color: rgba(223, 64, 64, 0.822);
+            border-radius: 8px;
+            margin: 10px 10px; */
+
+        background-color: rgb(241, 94, 26);
+        display: block;
+
+        text-decoration: none;
+        color: white;
+        border-radius: 8px;
+        height: auto;
+        padding: 10px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        
+        }
+
+        .footer{
+            background-color: plum;
+            height: auto;
+            color: white;
+            font-size: 15px;
+            /* display: flex; */
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0px;
+        }
+
+        /* Media quires starts now:  */
+
+        /* Breakpoints:
+            1. above 1200
+            2. 1025 to 1200
+            3. 769 to 1024
+            4. 481 to 768
+            5. upto 480 */
+
+        /* Break-point-1 */
+        @media(min-width: 1150px){
+            *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            /* border: solid; */
+            width:100vw;
+            padding: 15px;
+            margin: 0px auto;
+        }
+      .header{
+            background-color: grey;
+            display: inline-block;
+            text-align: center;
+            width: 100vw;
+            height: 80px;
+            position: fixed;
+            top: 0;
+            z-index: 10;
+        }
+
+        .header:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .navbar{
+            list-style:none;
+            margin-top: 0;
+            margin-bottom: 0;
+            
+            padding: 0;
+            overflow: hidden;
+            line-height: 80px;
+            /* float: right; */
+            
+        }
+        
+        .navbar li{
+            display: inline-block;
+            margin-top: 0px;
+            width: 220px;
+            line-height: 80px;
+            /* padding-left: 20px; */
+            list-style: none;
+        }
+        .navbar a{
+            display: block;
+            text-decoration: none;
+            font-family:fantasy ;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+        .navbar li a:hover{
+            background-color: rgb(202, 183, 11);
+            color: lavenderblush;
+            transition: 0.4s;
+        }
+        .show, .hide{
+            line-height: 80px;
+            font-size: 30px;
+            display: none;
+        }
+        .show{
+            float: right;
+        }
+        .show i{
+            margin-right: 20px;
+        }
+
+        #chk{
+            position: absolute;
+            visibility: hidden;
+            z-index: -10;
+            display: none;
+        }
+
+        html{
+            scroll-padding-top: 80px;
+            scroll-behavior: smooth;
+        }
+
+         .banner{
+            width: 99vw;
+            height: 100vh;
+            position: relative;
+            border: 2px solid;
+            margin-top: 80px;
+        }
+
+        .banner img{
+            
+            width: 100%;
+            height: 100%;
+        }
+
+        .banner h2{
+            position: absolute;
+            color: rgb(230, 223, 223);
+            text-transform: uppercase;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 35px;
+            top: 20px;
+            left: 20;
+        }
+        .section1{
+            font-size: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+            
+        }
+        /* .section1:after{
+            content: '';
+            display: block;
+            clear: both;
+        } */
+        .circles{
+            
+            margin: 15px 10px;
+            width:250px;
+            height: 250px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .section2{
+            /* border: solid green; */
+            margin: 20px ;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .left{
+            background-color: grey;
+            width: 49%;
+            height: 600px;
+            font-size: 30px;
+            color: white;
+           
+        }
+        .right{ background-color:white;
+        width: 48%;
+        height: 600px;
+        margin-left: 30px;
+        }
+        #article{
+            position: relative;
+            margin: 0px 20px 20px 25px;
+            width:100%;
+            height: 184px;
+            background-color:rgb(241, 101, 50);
+            font-size: 40px;
+            color:black;
+            overflow: hidden;
+            border: 1px solid;
+            /* display: flex; */
+       }
+
+       #article h3{
+           position: absolute;    
+           text-align: left;
+           
+       }
+
+       .overlap {
+       
+        font-size: 40px;
+        position: absolute;
+        z-index: 1;
+        margin: 0px auto;
+        top: 0px;
+
+      }
+        .section3{
+            /* padding: 20px; */
+            /* border: solid ; */
+           
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box{
+           
+            width: 300px;
+            height: 340px;
+            border-radius: 10px;
+            background-color: rgba(168, 164, 164, 0.671);
+            margin: 20px 20px;
+            
+        }
+
+        .box img{
+            width: 100%;
+            height: 150px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .box h3{
+            margin-top: 0px;
+            margin-bottom: 0px;
+            text-align: center;
+        }
+        .box p{
+             text-align:left;
+             margin: 5px;
+        }
+        .box .button a{
+            /* width: 100%;
+            background-color: rgba(223, 64, 64, 0.822);
+            border-radius: 8px;
+            margin: 10px 10px; */
+
+        background-color: rgb(241, 94, 26);
+        display: block;
+
+        text-decoration: none;
+        color: white;
+        border-radius: 8px;
+        height: auto;
+        padding: 10px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        
+        }
+
+        .footer{
+            background-color: plum;
+            height: auto;
+            color: white;
+            font-size: 15px;
+            /* display: flex; */
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0px;
+        }
+        }
+
+        /* BreakPoint 2 */
+
+        @media(min-width: 768px) and (max-width: 1149px){
+            .show, .hide{
+                display: block;
+            }
+            .header:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .header{
+            z-index: 10;
+            top: 0;
+        }
+            .header .navbar{
+                position:fixed;
+                top: 0;
+                /* display: none; */
+                right: -100%;
+                width: 100%;
+                height: 40vh;
+                background-color: lightblue;
+                color: white;
+                text-align:center;               
+                padding: 80px 0px;
+                transition: 0.5s;
+                line-height:normal;
+            }
+            .navbar li{
+                display: block;
+                 /* center the list  */
+                margin: 0 auto;
+            } 
+            .navbar li a{
+                display: block;
+            }
+
+            /* checked is not working when doing #chk:checked ~ menue */
+            #chk:checked ~ .navbar{
+                display: block;
+                right: 0;
+            }
+            .hide{
+                position: absolute;
+                top: 0;
+                margin-left: 10px;
+            }
+            html{
+            scroll-padding-top: 80px;
+            scroll-behavior: smooth;
+        }
+
+         .banner{
+            width: 99vw;
+            height: 100vh;
+            position: relative;
+            border: 2px solid;
+            margin-top: 80px;
+        }
+/* 
+        .banner img{
+            
+            width: 100% ;
+            height: 100%;
+        } */
+
+        .banner h2{
+            position: absolute;
+            color: rgb(230, 223, 223);
+            text-transform: uppercase;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 35px;
+            top: 20px;
+            left: 20;
+        }
+        .section1{
+            font-size: 40px;
+            /* display: flex;
+            align-items: center;
+            justify-content: center; */
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            margin-top: 15px;
+            
+        }
+        /* .section1:after{
+            content: '';
+            display: block;
+            clear: both;
+        } */
+        .circles{
+            
+            margin: 15px 0px;
+            width:250px;
+            height: 250px;
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .section2{
+            /* border: solid green; */
+            margin: 20px ;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+        }
+        .section2:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .left{
+            
+            background-color: grey;
+            width: 80%;
+            height: 600px;
+            font-size: 30px;
+            color: white;
+            margin-bottom: 20px;
+           
+        }
+        .right{ 
+        
+        background-color:white;
+        width: 80%;
+        height: 600px;
+        margin: 0px auto;
+        /* border: 2px solid; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* margin-left: 30px; */
+        }
+        #article{
+            position: relative;
+            /* margin: 0px 20px 20px 25px; */
+            width:100%;
+            height: 184px;
+            background-color:rgb(241, 101, 50);
+            font-size: 40px;
+            color:black;
+            overflow: hidden;
+            border: 1px solid;
+            /* display: flex; */
+       }
+
+       #article h3{
+           position: absolute;    
+           text-align: left;
+
+       }
+
+       .overlap {
+       
+        font-size: 40px;
+        position: absolute;
+        z-index: 1;
+        top: 0px;
+        /* margin: 0px auto; */
+
+      }
+        .section3{
+            /* padding: 20px; */
+            /* border: solid ; */
+           
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            
+        }
+        .box{
+           
+            width: 300px;
+            height: 340px;
+            border-radius: 10px;
+            background-color: rgba(168, 164, 164, 0.671);
+            margin: 20px 20px;
+            
+        }
+
+        .box img{
+            width: 100%;
+            height: 150px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .box h3{
+            margin-top: 0px;
+            margin-bottom: 0px;
+            text-align: center;
+        }
+        .box p{
+             text-align:left;
+             margin: 5px;
+        }
+        .box .button a{
+            /* width: 100%;
+            background-color: rgba(223, 64, 64, 0.822);
+            border-radius: 8px;
+            margin: 10px 10px; */
+
+        background-color: rgb(241, 94, 26);
+        display: block;
+
+        text-decoration: none;
+        color: white;
+        border-radius: 8px;
+        height: auto;
+        padding: 10px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        
+        }
+
+        .footer{
+            background-color: plum;
+            height: auto;
+            color: white;
+            font-size: 15px;
+            /* display: flex; */
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0px;
+        }
+        }
+
+        /* BreakPoint-3 */
+        @media(min-width:320px ) and (max-width: 767px){
+            .show, .hide{
+                display: block;
+            }
+            .header:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .header{
+            z-index: 10;
+            top: 0;
+        }
+            .header .navbar{
+                position:fixed;
+                top: 0;
+                /* display: none; */
+                right: -100%;
+                width: 100%;
+                height: 40vh;
+                background-color: lightblue;
+                color: white;
+                text-align:center;               
+                padding: 80px 0px;
+                transition: 0.5s;
+                line-height:normal;
+            }
+            .navbar li{
+                display: block;
+                 /* center the list  */
+                margin: 0 auto;
+            } 
+            .navbar li a{
+                display: block;
+            }
+
+            /* checked is not working when doing #chk:checked ~ menue */
+            #chk:checked ~ .navbar{
+                display: block;
+                right: 0;
+            }
+            .hide{
+                position: absolute;
+                top: 0;
+                margin-left: 10px;
+            }
+            html{
+            scroll-padding-top: 80px;
+            scroll-behavior: smooth;
+        }
+
+         .banner{
+            width: 99vw;
+            height: 100vh;
+            position: relative;
+            border: 2px solid;
+            margin-top: 80px;
+        }
+/* 
+        .banner img{
+            
+            width: 100% ;
+            height: 100%;
+        } */
+
+        .banner h2{
+            position: absolute;
+            color: rgb(230, 223, 223);
+            text-transform: uppercase;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 35px;
+            top: 20px;
+            left: 20;
+        }
+        .section1{
+            font-size: 40px;
+            /* display: flex;
+            align-items: center;
+            justify-content: center; */
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            margin-top: 15px;
+            
+        }
+        /* .section1:after{
+            content: '';
+            display: block;
+            clear: both;
+        } */
+        .circles{
+            
+            margin: 15px 0px;
+            width:250px;
+            height: 250px;
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .section2{
+            /* border: solid green; */
+            margin: 20px ;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+        }
+        .section2:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .left{
+            
+            background-color: grey;
+            width: 80%;
+            height: 600px;
+            font-size: 30px;
+            color: white;
+            margin-bottom: 20px;
+           
+        }
+        .right{ 
+        
+        background-color:white;
+        width: 80%;
+        height: 600px;
+        margin: 0px auto;
+        /* border: 2px solid; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* margin-left: 30px; */
+        }
+        #article{
+            position: relative;
+            /* margin: 0px 20px 20px 25px; */
+            width:100%;
+            height: 184px;
+            /* background-color:rgb(241, 101, 50); */
+            font-size: 40px;
+            color:black;
+            overflow: hidden;
+            border: 1px solid;
+            /* display: flex; */
+       }
+
+       #article h3{
+           position: absolute;    
+           text-align: left;
+
+       }
+
+       .overlap {
+       
+        font-size: 40px;
+        position: absolute;
+        z-index: 1;
+        top: 0px;
+        /* margin: 0px auto; */
+
+      }
+        .section3{
+            /* padding: 20px; */
+            /* border: solid ; */
+           
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            
+        }
+        .box{
+           
+            width: 300px;
+            height: 340px;
+            border-radius: 10px;
+            background-color: rgba(168, 164, 164, 0.671);
+            margin: 20px 20px;
+            
+        }
+
+        .box img{
+            width: 100%;
+            height: 150px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .box h3{
+            margin-top: 0px;
+            margin-bottom: 0px;
+            text-align: center;
+        }
+        .box p{
+             text-align:left;
+             margin: 5px;
+        }
+        .box .button a{
+            /* width: 100%;
+            background-color: rgba(223, 64, 64, 0.822);
+            border-radius: 8px;
+            margin: 10px 10px; */
+
+        background-color: rgb(241, 94, 26);
+        display: block;
+
+        text-decoration: none;
+        color: white;
+        border-radius: 8px;
+        height: auto;
+        padding: 10px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        
+        }
+
+        .footer{
+            background-color: plum;
+            height: auto;
+            color: white;
+            font-size: 15px;
+            /* display: flex; */
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0px;
+        }
+
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header" id="top">
+            <input type="checkbox" id="chk">
+            <label for="chk" class="show">
+                <i class="fa fa-bars"></i>
+            </label>
+            <ul class = "navbar">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#team">TEAM</a></li>
+                <li><a href="#about">ABOUT US</a></li>
+                <li><a href="#technologies">TECHNOLOGS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                    <label for="chk" class="hide">
+                        <i class="fa fa-times"></i>
+                    </label>
+              </ul>
+        </div>
+        <div class="banner" id="home">
+            <img src="img/Practical 8/Banner Background.jpg" alt="">
+            <h2>PRACTICAL-8</h2>
+        </div>
+        <p  id="team" style="font-size: 40px; text-align: center;">Team Members</p>
+        <div class="section1"> 
+            <div class="circles">
+                <img src="img/Practical 8/1.png" style="width: 100% auto; height: auto; border-radius: 50%;" alt="">
+            </div>
+            <div class="circles">
+                <img src="img/Practical 8/2.png" style="width: 100% auto; border-radius: 50%;" alt="">
+            </div>
+            <div class="circles">
+                <img src="img/Practical 8/3.png" style="width: 100% auto; border-radius: 50%;" alt="">
+            </div>
+            <div class="circles">
+                <img src="img/Practical 8/4.png" style="width: 100% auto; border-radius: 50%;" alt="">
+            </div>
+        </div>
+        <p  id="about" style="font-size: 40px; text-align: center;">About US</p>
+        <div class="section2"> 
+            <div class="left"><h3 style="margin-left: 10px; margin-top: 10px;">About Us</h3>
+                <p style="margin: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo reiciendis odio, quis illum unde adipisci quaerat cum ea praesentium laudantium? Perferendis nisi magnam vitae quis vero quam, sint quos nihil excepturi velit quaerat accusantium nemo error! In cumque, labore dolore minus at error blanditiis quo possimus beatae, rerum accusamus nulla.</p>
+            </div>
+            <div class="right">
+                <div id="article">
+                    <div class="overlap">
+                        Project-1
+                    </div>
+                    <img src="img/Practical 8/p1.jpg" style="margin-top: -50px;" alt="">
+                    <h3>Project-1</h3>
+                </div>
+                <div id="article">
+                    <div class="overlap">
+                        Project-2
+                    </div>
+                    <img src="img/Practical 8/p2.jpeg" style="margin-top: -80px;"  alt="">
+                </div>
+                <div id="article">
+                    <div class="overlap">
+                        Project-3
+                    </div>
+                    <img src="img/Practical 8/p3.jpg" style="margin-top: -50px;" alt="">
+<!-- 
+                    here i was using width:100% in style of image because of which the images in the article 
+                    were resizing themselves and were giving blank spase whe they got short enough. -->
+                </div>
+            </div>
+        </div>
+        <p  id="technologies" style="font-size: 40px; text-align: center;">Technologies Used</p>
+        <div class="section3">
+            <div class="box">
+                <img src="../Assignments/img/Prac_5_html_image.jpg" alt="">
+                <h3>Introduction to html</h3>
+                <p>Hypertext Markup Language (HTML) is the standard markup language for
+                documents designed to be displayed in a web browser. It can be
+                assisted by technologies such as CSS and scripting languages such as
+                JS.</p>
+                <div class="button">
+                    <a href="Practical-5_html.html"> Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="../Assignments/img/Prac_5_css_image.jpg" alt="">
+                <h3>Introduction to CSS</h3>
+                <p>Cascading Style Sheets (CSS) is a style sheet language used for
+                    describing the presentation of a document written in a markup language
+                    like HTML. CSS is a technology of the World wide web.</p>
+                <div class="button">
+                    <a href="Practical-5_css.html"> Read More</a>
+            </div>
+        </div>
+            <div class="box">
+                <img src="../Assignments/img/javascript.jpg" alt="">
+                <h3>Introduction to Java Script</h3>
+                <p>JavaScript, often reffered as JS, is a high-level programming language. It was originally
+                    designed as a scripting language for websites but became widely
+                    adopted as a general-purpose programming language.</p>
+                <div class="button">
+                    <a href="Practical-5_javaScript.html"> Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="../Assignments/img/Prac_5_bootstrap_image.jpg" alt="">
+                <h3>Introduction to Bootstrap</h3>
+                <p>Bootstrap is a free and open-source CSS framework directed at
+                    responsive, mobile-first front-end web development. It contains CSS-
+                    and (optionally) JavaScript-based design templates.</p>
+                <div class="button">
+                    <a href="Practical-5_bootstrap.html"> Read More</a>
+                </div>
+            </div>
+        </div>
+        <p style="font-size: 40px; text-align: center;">Contact</p>
+        <div class="footer" id="contact"><p>Website template for Practical-8 </p>
+            <p>@Rachit Rai</p>
+            <p>Contact me on <a href="mailto:uzumki002@gmail.com" title="My mail id">My Mail</a> My Mail</p>
+            <br>
+            <a href="#top">Back to top</a>
+        </div>
+    </div>
+</body>
+</html>
