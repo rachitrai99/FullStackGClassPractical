@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-15</title>
+    <style>
+        body {
+            background-color: grey;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+        }
+        div {
+            display: flex;
+            justify-content: center;
+        }
+        p {
+            padding: 10px 15px;
+            border: 2px solid grey;
+            color: grey;
+            background-color: yellow;
+            width: 20px;
+            text-align: center;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        div #decrease {
+            margin-right: 40px;
+        }
+        div #increase {
+            margin-left: 40px;
+        }
+        p:hover {
+            color: black;
+            border: 2px solid black;
+        }
+        div #num {
+            background-color: grey;
+            color: yellow;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>COUNTER</h1>
+
+    <div>
+        <p id="decrease" onclick="decrement()">-</p>
+        <p id="num">0</p>
+        <p id="increase" onclick="increment()">+</p>
+    </div>
+
+    <script>
+        function decrement() {
+            var num = parseInt(document.getElementById("num").innerHTML);
+            document.getElementById("num").innerHTML = num - 1;
+        }
+        function increment() {
+            var num = parseInt(document.getElementById("num").innerHTML);
+            document.getElementById("num").innerHTML = num + 1;
+        }
+    </script>
+</body>
+</html>
