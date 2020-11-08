@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to right, rgb(39, 224, 70), rgb(70, 208, 226));
+    font-family: monospace ;
+    letter-spacing: 2px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+form {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 130%;
+}
+
+form input {
+    margin-left: 20px;
+    font-size: 110%;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+form button {
+    background-color: white;
+    color: blue;
+    font-size: 110%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-left: -5px;
+    outline: none;
+}
+
+form button:hover {
+    color: white;
+    background-color: blue;
+}
+
+/* for todo-container */
+#todo-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#todo-list {
+    list-style: none;
+    width: 25%;
+    font-size: 110%;
+}
+
+#todo-list .todo {
+    margin: 10px;
+    /* padding: 10px; */
+    background-color: white;
+    display: flex;
+}
+
+.todo-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+.chk-btn, .dlt-btn {
+    padding: 16px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    outline: none;
+    background-color: #b8de6f;
+}
+
+.dlt-btn {
+    background-color: #ea2c62;
+}
+
+.fa-check, .fa-trash {
+    pointer-events: none;
+}
+
+.completed {
+    opacity: 0.3;
+    text-decoration: line-through;
+}
