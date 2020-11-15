@@ -53,20 +53,20 @@
         var h = today.getHours();
         if (h < 12) {
           document.body.style.backgroundImage =
-            'url("../images/morning.jpg")';
+            'url("../img/morning.jpg")';
           greeting.innerHTML = "GOOD MORNING";
         } else if (h < 16) {
           document.body.style.backgroundImage =
-            'url("../images/afternoon.png")';
+            'url("../img/afternoon.jpg")';
           document.body.style.color = "white";
           greeting.innerHTML = "GOOD AFTERNOON";
         } else if (h < 20) {
           document.body.style.backgroundImage =
-            'url("../images/evening.jpg")';
+            'url("../img/evening.jpg")';
           document.body.style.color = "white";
           greeting.innerHTML = "GOOD EVENING";
         } else {
-          document.body.style.backgroundImage = 'url("../images/Night.jpg")';
+          document.body.style.backgroundImage = 'url("../img/Night.jpg")';
           document.body.style.color = "white";
           greeting.innerHTML = "GOOD NIGHT";
         }
